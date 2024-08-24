@@ -290,8 +290,9 @@ from pinecone import PodSpec
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)  # This will enable CORS for all routes
+CORS(app, resources={r"/*": {"origins": "https://project-05-rate-professor.vercel.app"}})
 
+# CORS(app)  # This will enable CORS for all routes
 # app = Flask(__name__)
 
 # Serve static files (including JSON)
@@ -432,4 +433,4 @@ def submit_review():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True, port=5000)
