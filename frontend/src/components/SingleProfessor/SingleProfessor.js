@@ -90,7 +90,7 @@ export default function SingleProfessor() {
       rating_message: ratingMessage,
     };
 
-    fetch("http://localhost:5000/submit-review", {
+    fetch("https://project-05-rate-professor.vercel.app/submit-review", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -14,7 +14,9 @@ export default function Compare() {
     // Function to fetch professor data
     const fetchProfessorData = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/professor/${id}`);
+        const response = await fetch(
+          `https://project-05-rate-professor.vercel.app/professor/${id}`
+        );
         if (response.ok) {
           const data = await response.json();
           setProfessor(data); // Store professor data in state
@@ -34,7 +36,9 @@ export default function Compare() {
     // Function to fetch professors' data
     const fetchProfessorsData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/test.json");
+        const response = await fetch(
+          "https://project-05-rate-professor.vercel.app/test.json"
+        );
         if (response.ok) {
           const data = await response.json();
           const professorsList = data.professors || []; // Extract professors array

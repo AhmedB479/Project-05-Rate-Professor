@@ -41,9 +41,12 @@ const HeroSection = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:5000/ask", {
-        question: query,
-      });
+      const res = await axios.post(
+        "https://project-05-rate-professor.vercel.app/ask",
+        {
+          question: query,
+        }
+      );
 
       // Add bot response after loading
       setMessages((prevMessages) => [

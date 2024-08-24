@@ -18,7 +18,7 @@ export default function Professors() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:5000/test.json")
+    fetch("https://project-05-rate-professor.vercel.app/test.json")
       .then((response) => response.json())
       .then((data) => setProfessors(data.professors))
       .catch((error) => console.error("Error fetching data:", error));
