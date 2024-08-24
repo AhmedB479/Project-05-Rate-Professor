@@ -37,7 +37,7 @@ export default function Compare() {
     const fetchProfessorsData = async () => {
       try {
         const response = await fetch(
-          "https://project-05-rate-professor.vercel.app/test.json"
+          "https://project-05-rate-professor-server.vercel.app/test.json"
         );
         if (response.ok) {
           const data = await response.json();

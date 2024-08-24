@@ -42,7 +42,7 @@ const HeroSection = () => {
 
     try {
       const res = await axios.post(
-        "https://project-05-rate-professor.vercel.app/ask",
+        "https://project-05-rate-professor-server.vercel.app/ask",
         {
           question: query,
         }
